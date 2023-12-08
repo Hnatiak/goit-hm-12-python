@@ -11,11 +11,6 @@ class AddressBook(UserDict):
         self.data[record.name.value] = record
 
     def delete_contact(self, contact_name):
-        """
-        Deletes a contact record based on the provided contact_name.
-        If the contact is found and deleted, it returns "Contact deleted".
-        If the contact is not found, it returns "Contact not found".
-        """
         contact_to_delete = self.data.get(contact_name)
         if contact_to_delete:
             del self.data[contact_name]
